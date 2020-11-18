@@ -3,7 +3,6 @@ import BeyCard from '../Components/BeyCard'
 
 class BeyContainer extends React.Component {
 
-
   renderBeys = () => {
     return this.props.beys.map(beyObj => <BeyCard key={beyObj.id} clickHandler={this.props.clickHandler} bey={beyObj}/>)
   }

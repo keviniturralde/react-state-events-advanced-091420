@@ -5,16 +5,18 @@ import BeyContainer from './Containers/BeyContainer.js'
 import Favorites from './Containers/Favorites.js'
 
 class App extends React.Component {
-state = {
-  api: beyArray 
-}
-clickHandler = (beyObj) => {
-    this.setState( previousState => {
-      const matchedBey = previousState.api.find(bey => beyObj.id === bey.id)
-      matchedBey.favorite = !matchedBey.favorite
-      return previousState
-    } )
-}
+  
+  state = {
+    api: beyArray 
+  }
+
+  clickHandler = (beyObj) => {
+      this.setState( previousState => {
+        const matchedBey = previousState.api.find(bey => beyObj.id === bey.id)
+        matchedBey.favorite = !matchedBey.favorite
+        return previousState
+      } )
+  }
 
   render() {
     return (

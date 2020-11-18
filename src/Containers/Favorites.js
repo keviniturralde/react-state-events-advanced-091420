@@ -4,7 +4,7 @@ import BeyCard from '../Components/BeyCard'
 export default class Favorites extends Component {
 
   renderBeys = () => {
-    return this.props.favBeys.map(beyObj => <BeyCard bey={beyObj}/>)
+    return this.props.favBeys.map(beyObj => <BeyCard clickHandler={this.props.clickHandler}  key={beyObj.id} bey={beyObj}/>)
   }
 
   render() {

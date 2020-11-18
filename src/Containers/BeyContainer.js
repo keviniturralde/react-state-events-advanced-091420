@@ -5,7 +5,7 @@ class BeyContainer extends React.Component {
 
 
   renderBeys = () => {
-    return this.props.beys.map(beyObj => <BeyCard bey={beyObj}/>)
+    return this.props.beys.map(beyObj => <BeyCard key={beyObj.id} clickHandler={this.props.clickHandler} bey={beyObj}/>)
   }
   
   render() {

@@ -17,7 +17,7 @@ import Favorites from './Containers/Favorites.js'
 
 class App extends React.Component {
 
-  
+
 
   render() {
     return (

@@ -3,8 +3,8 @@ import React from "react";
 class BeyCard extends React.Component {
 
   favClickHandler = () => {
-    this.props.clickHandler(this.props.bey)
-    if(this.props.bey.favorite) {
+    this.props.clickHandler(this.props.bey, this.props.parent)
+    if(this.props.bey.favorite && this.props.parent === 'favs') {
       window.alert("I got a hot sauce in my bag, swag")
     }
   }

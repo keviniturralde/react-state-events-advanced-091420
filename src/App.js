@@ -10,12 +10,16 @@ class App extends React.Component {
     api: beyArray 
   }
 
-  clickHandler = (beyObj) => {
-      this.setState( previousState => {
-        const matchedBey = previousState.api.find(bey => beyObj.id === bey.id)
-        matchedBey.favorite = !matchedBey.favorite
-        return previousState
-      } )
+  clickHandler = (beyObj, parent) => {
+      if (parent === 'index' && beyObj.favorite) {
+        console.log("already favorited!")
+      } else {
+        this.setState( previousState => {
+          const matchedBey = previousState.api.find(bey => beyObj.id === bey.id)
+          matchedBey.favorite = !matchedBey.favorite
+          return previousState
+        })
+      } 
   }
 
   render() {

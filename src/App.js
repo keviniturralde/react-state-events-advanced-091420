@@ -12,7 +12,7 @@ class App extends React.Component {
 
   clickHandler = (beyObj, parent) => {
       if (parent === 'index' && beyObj.favorite) {
-        console.log("already favorited!")
+        console.log("already favorited!", beyObj.favorite)
       } else {
         this.setState( previousState => {
           const matchedBey = previousState.api.find(bey => beyObj.id === bey.id)
